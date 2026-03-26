@@ -5,22 +5,15 @@
 [ext_resource type="Texture2D" uid="uid://hi4y3117x6bs" path="res://character_green_walk_b.png" id="3_sweqy"]
 [ext_resource type="Texture2D" uid="uid://dppbckncj1lg6" path="res://character_green_front.png" id="4_2hs0m"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_1jxqw"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_hqtel"]
 atlas = ExtResource("2_hqtel")
 region = Rect2(0, 0, 256, 256)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_dw050"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_sweqy"]
 atlas = ExtResource("3_sweqy")
 region = Rect2(0, 0, 256, 256)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_b26j0"]
-load_path = "res://.godot/imported/character_green_front.png-0a41690ceee99a2dbc94476ad5ee0026.ctex"
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_2hs0m"]
-atlas = SubResource("CompressedTexture2D_b26j0")
-region = Rect2(0, 0, 256, 256)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_n7ghd"]
 atlas = ExtResource("4_2hs0m")
 region = Rect2(0, 0, 256, 256)
 
@@ -28,10 +21,10 @@ region = Rect2(0, 0, 256, 256)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_1jxqw")
+"texture": SubResource("AtlasTexture_hqtel")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_dw050")
+"texture": SubResource("AtlasTexture_sweqy")
 }],
 "loop": true,
 "name": &"Up",
@@ -40,9 +33,6 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_2hs0m")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_n7ghd")
 }],
 "loop": true,
 "name": &"Walk",
@@ -63,7 +53,6 @@ scale = Vector2(0.10065661, 0.10065661)
 sprite_frames = SubResource("SpriteFrames_dw050")
 animation = &"Walk"
 autoplay = "Walk"
-frame_progress = 0.28734574
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=392599099]
 position = Vector2(-0.2489872, 3.4858437)
