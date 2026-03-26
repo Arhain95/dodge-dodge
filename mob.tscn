@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cau2qp7okaa23"]
+[gd_scene format=3 uid="uid://cau2qp7okaa23"]
 
 [ext_resource type="Script" uid="uid://d0sr5esp5bn7u" path="res://mob.gd" id="1_1qmh0"]
 [ext_resource type="Texture2D" uid="uid://birsf6mk4cmk2" path="res://art/enemyFlyingAlt_1.png" id="1_b3mxk"]
@@ -8,14 +8,22 @@
 [ext_resource type="Texture2D" uid="uid://durjyjdwq8yb1" path="res://art/enemyWalking_1.png" id="5_cixyi"]
 [ext_resource type="Texture2D" uid="uid://romikmm4pfml" path="res://art/enemyWalking_2.png" id="6_7ulmv"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_1qmh0"]
+atlas = ExtResource("1_b3mxk")
+region = Rect2(0, 0, 109, 152)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gfurk"]
+atlas = ExtResource("2_1qmh0")
+region = Rect2(0, 0, 72, 186)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_pcqmr"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_b3mxk")
+"texture": SubResource("AtlasTexture_1qmh0")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_1qmh0")
+"texture": SubResource("AtlasTexture_gfurk")
 }],
 "loop": true,
 "name": &"fly",
@@ -45,24 +53,25 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b3mxk"]
-radius = 29.0
-height = 70.0
+radius = 30.284433
+height = 63.933792
 
-[node name="Mob" type="RigidBody2D" groups=["mobs"]]
+[node name="Mob" type="RigidBody2D" unique_id=1390135789 groups=["mobs"]]
 collision_mask = 0
 gravity_scale = 0.0
 script = ExtResource("1_1qmh0")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.75, 0.75)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=246478138]
+modulate = Color(0.61, 1, 0.6425, 1)
+scale = Vector2(0.9274158, 0.77766734)
 sprite_frames = SubResource("SpriteFrames_pcqmr")
-animation = &"fly"
-frame = 1
-frame_progress = 0.887999
+animation = &"walk"
+frame_progress = 0.06081362
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1679309573]
 position = Vector2(0, -1)
 rotation = 1.5708
+scale = Vector2(1.18873, 1.0000001)
 shape = SubResource("CapsuleShape2D_b3mxk")
 
-[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=329170662]
