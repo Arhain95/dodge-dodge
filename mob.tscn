@@ -1,34 +1,13 @@
 [gd_scene format=3 uid="uid://cau2qp7okaa23"]
 
 [ext_resource type="Script" uid="uid://d0sr5esp5bn7u" path="res://mob.gd" id="1_1qmh0"]
-[ext_resource type="Texture2D" uid="uid://birsf6mk4cmk2" path="res://art/enemyFlyingAlt_1.png" id="1_b3mxk"]
-[ext_resource type="Texture2D" uid="uid://6aymjphqo5up" path="res://art/enemyFlyingAlt_2.png" id="2_1qmh0"]
 [ext_resource type="Texture2D" uid="uid://3bdarhjrjkqm" path="res://art/enemySwimming_1.png" id="3_gfurk"]
 [ext_resource type="Texture2D" uid="uid://bnoo43chru12b" path="res://art/enemySwimming_2.png" id="4_ieysi"]
 [ext_resource type="Texture2D" uid="uid://durjyjdwq8yb1" path="res://art/enemyWalking_1.png" id="5_cixyi"]
 [ext_resource type="Texture2D" uid="uid://romikmm4pfml" path="res://art/enemyWalking_2.png" id="6_7ulmv"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_1qmh0"]
-atlas = ExtResource("1_b3mxk")
-region = Rect2(0, 0, 109, 152)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_gfurk"]
-atlas = ExtResource("2_1qmh0")
-region = Rect2(0, 0, 72, 186)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_pcqmr"]
 animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1qmh0")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_gfurk")
-}],
-"loop": true,
-"name": &"fly",
-"speed": 3.0
-}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("3_gfurk")
@@ -65,8 +44,7 @@ script = ExtResource("1_1qmh0")
 modulate = Color(0.61, 1, 0.6425, 1)
 scale = Vector2(0.9274158, 0.77766734)
 sprite_frames = SubResource("SpriteFrames_pcqmr")
-animation = &"walk"
-frame_progress = 0.06081362
+animation = &"swim"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1679309573]
 position = Vector2(0, -1)

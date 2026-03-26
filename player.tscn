@@ -53,13 +53,12 @@ animations = [{
 size = Vector2(27.842072, 25.01464)
 
 [node name="Player" type="Area2D" unique_id=2073106668]
-position = Vector2(88, 98)
+position = Vector2(-1.0000076, 1.9999771)
 scale = Vector2(4.0162487, 4.0162487)
 script = ExtResource("1_sweqy")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1282080459]
-position = Vector2(14.609953, 46.8736)
 scale = Vector2(0.10065661, 0.10065661)
 sprite_frames = SubResource("SpriteFrames_dw050")
 animation = &"Walk"
@@ -67,7 +66,7 @@ autoplay = "Walk"
 frame_progress = 0.28734574
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=392599099]
-position = Vector2(14.812868, 50.424625)
+position = Vector2(-0.2489872, 3.4858437)
 scale = Vector2(0.4227102, 0.7219581)
 shape = SubResource("RectangleShape2D_hqtel")
 
